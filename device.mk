@@ -25,16 +25,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 LOCAL_PATH := device/xiaomi/clover
 
-# fscrypt policy version
-TW_USE_FSCRYPT_POLICY := 1
 
 # api level
 PRODUCT_SHIPPING_API_LEVEL := 27
 
 # Decryption
-#PRODUCT_PACKAGES += \
-#    qcom_decrypt \
-#    qcom_decrypt_fbe
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
 
 # Exclude Apex
 TW_EXCLUDE_APEX := true
